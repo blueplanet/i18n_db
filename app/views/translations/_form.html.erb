@@ -1,0 +1,42 @@
+<%= form_for(translation) do |f| %>
+  <% if translation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(translation.errors.count, "error") %> prohibited this translation from being saved:</h2>
+
+      <ul>
+      <% translation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :locale %>
+    <%= f.text_field :locale %>
+  </div>
+
+  <div class="field">
+    <%= f.label :key %>
+    <%= f.text_field :key %>
+  </div>
+
+  <div class="field">
+    <%= f.label :value %>
+    <%= f.text_area :value %>
+  </div>
+
+  <div class="field">
+    <%= f.label :interpolations %>
+    <%= f.text_area :interpolations %>
+  </div>
+
+  <div class="field">
+    <%= f.label :is_proc %>
+    <%= f.check_box :is_proc %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Locale:</strong>
+  <%= @translation.locale %>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @translation.key %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @translation.value %>
+</p>
+
+<p>
+  <strong>Interpolations:</strong>
+  <%= @translation.interpolations %>
+</p>
+
+<p>
+  <strong>Is proc:</strong>
+  <%= @translation.is_proc %>
+</p>
+
+<%= link_to 'Edit', edit_translation_path(@translation) %> |
+<%= link_to 'Back', translations_path %>
